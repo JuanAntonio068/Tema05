@@ -1,6 +1,6 @@
 package interfaces.ejercicio2;
 
-public class Futbolista {
+public class Futbolista implements Comparable<Futbolista> {
 
 	// El número de la camiseta del futbolista
 	private int numCamiseta;
@@ -59,7 +59,8 @@ public class Futbolista {
 	}
 
 	/**
-	 * Devuelve el nombre 
+	 * Devuelve el nombre
+	 * 
 	 * @return El nombre del jugadro
 	 */
 	public String getNombre() {
@@ -67,7 +68,8 @@ public class Futbolista {
 	}
 
 	/**
-	 * Modifica el nombre 
+	 * Modifica el nombre
+	 * 
 	 * @param nombre El nuevo nombre
 	 */
 	public void setNombre(String nombre) {
@@ -78,6 +80,7 @@ public class Futbolista {
 
 	/**
 	 * Devuelve la edad
+	 * 
 	 * @return La edad del futbolista
 	 */
 	public int getEdad() {
@@ -92,4 +95,33 @@ public class Futbolista {
 		return numGoles;
 	}
 
+	@Override
+	public String toString() {
+		return "Número de camiseta: " + this.numCamiseta + "\n Nombre: " + this.nombre + "\n Edad: " + this.edad
+				+ "\n Número de goles: " + this.numGoles + "\n";
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		boolean res = false;
+		Futbolista f1 = (Futbolista) obj;
+
+		if (this.numCamiseta == f1.numCamiseta && this.nombre.equalsIgnoreCase(f1.nombre)) {
+			res = true;
+		}
+		return res;
+	}
+
+	@Override
+	public int compareTo(Futbolista f1) {
+		int res = 0;
+		if (this.numCamiseta < f1.numCamiseta) {
+			res = -1;
+		} else if (this.numCamiseta > f1.numCamiseta) {
+			res = 1;
+		} else {
+			res = this.nombre.compareTo(f1.nombre);
+		}
+		return res;
+	}
 }
