@@ -35,4 +35,32 @@ public class Camion extends Vehiculo {
 		this.mercanciaPeligrosa = mercanciaPeligrosa;
 	}
 
+	/**
+	 * Devuelve si hay mercancia peligrosa
+	 * 
+	 * @return Si el camión tiene mercancia peligrosa
+	 */
+	public boolean isMercanciaPeligrosa() {
+		return mercanciaPeligrosa;
+	}
+
+	/**
+	 * Cambia si hay mercancía peligrosa
+	 * 
+	 * @param mercanciaPeligrosa el nuevo valor para saber si hay mercancia
+	 *                           peligrosa
+	 */
+	public void setMercanciaPeligrosa(boolean mercanciaPeligrosa) {
+		this.mercanciaPeligrosa = mercanciaPeligrosa;
+	}
+
+	/**
+	 * Devuelve el peso máximo
+	 * 
+	 * @return el peso máximo del camión
+	 */
+	public double getPesoMaximo() {
+		return pesoMaximo;
+	}
+
 }

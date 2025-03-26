@@ -35,18 +35,58 @@ public class Vehiculo {
 	}
 
 	/**
+	 * Devuelve la marca
+	 * 
+	 * @return la marca del coche
+	 */
+	public String getMarca() {
+		return marca;
+	}
+
+	/**
+	 * Devuelve el modelo
+	 * 
+	 * @return el modelo del coche
+	 */
+	public String getModelo() {
+		return modelo;
+	}
+
+	/**
+	 * Devuelve el color
+	 * 
+	 * @return el color del coche
+	 */
+	public String getColor() {
+		return color;
+	}
+
+	/**
 	 * Método para parar el coche
 	 */
-	public void parar() {
+	public boolean parar() {
 
-		this.motor = false;
+		boolean res = false;
+
+		if (velocidad == 0) {
+			this.motor = false;
+			res = true;
+		}
+		return res;
+
 	}
 
 	/**
 	 * Método para arrancar el coche
 	 */
-	public void arrancar() {
-		this.motor = true;
+	public boolean arrancar() {
+		boolean res = false;
+
+		if (!motor) {
+			this.motor = true;
+			res = true;
+		}
+		return res;
 	}
 
 	public boolean subirMarcha(int velocidad) {

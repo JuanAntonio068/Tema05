@@ -42,5 +42,23 @@ public class Turismo extends Vehiculo {
 		default -> this.uso = Tipo.PARTICULAR;
 		}
 	}
-	
+
+	/**
+	 * Devuelve el número de plazas
+	 * 
+	 * @return el número de plazas del turismo
+	 */
+	public int getNumPlazas() {
+		return numPlazas;
+	}
+
+	/**
+	 * Devuelve el uso
+	 * 
+	 * @return el uso del turismo
+	 */
+	public Tipo getUso() {
+		return uso;
+	}
+
 }
