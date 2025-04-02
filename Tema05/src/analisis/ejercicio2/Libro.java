@@ -43,6 +43,11 @@ public class Libro extends Ficha {
 	}
 
 	@Override
+	public String toString() {
+		return "ID: " + getId() + "\n Título: " + getTitulo() + "\n Autor: " + autor + "\n Editorial: " + editorial + "\n";
+	}
+
+	@Override
 	public String prestar() {
 
 		return "El libro Se ha prestado por 15 días";

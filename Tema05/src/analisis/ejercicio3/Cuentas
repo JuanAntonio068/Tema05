@@ -1,0 +1,49 @@
+CuentaBancaria
+	- numCuenta: int
+	- saldo: double
+	- titular: []
+	+ boolean ingresar dinero() 
+	+ boolean retirar dinero()
+	+ añadir titular()
+	+ borrar titular()
+
+Titular
+	- DNI: String
+	- nombre: String 
+	- apellidos: String
+	- telf: int
+
+CuentaAhorro extends CuentaBancaria
+	- cuota: double
+	- interes: double
+	+ saldo nuevo
+-------------------------
+	heredados: 
+		- numCuenta: int
+		- saldo: double
+		- titular: []
+		+ boolean ingresar dinero() 
+		+ boolean retirar dinero()
+		+ añadir titular()
+		+ borrar titular()
+
+CuentaCorriente extends CuentaBancaria
+	- porcentaje
+	+ numTransc
+	- transacciones []
+	+ realizar transaccion()
+-------------------------
+	heredados: 
+		- numCuenta: int
+		- saldo: double
+		- titular: []
+		+ boolean ingresar dinero() 
+		+ boolean retirar dinero()
+		+ añadir titular()
+		+ borrar titular()
+Transaccion
+	- dia: int
+	- mes: int
+	- año: int
+	- concepto: String
+	- importe: double

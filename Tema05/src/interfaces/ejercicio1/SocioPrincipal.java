@@ -15,6 +15,22 @@ public class SocioPrincipal {
 
 		// Imprimimos el resultado
 		System.out.println(Arrays.deepToString(socios));
+		// Salto de línea
+		System.out.println();
+
+		// Lo ordenamos según la edad
+		Arrays.sort(socios, new ComparaEdad());
+
+		// Imprimimos el resultado
+		System.out.println(Arrays.deepToString(socios));
+		// Salto de línea
+		System.out.println();
+
+		// Lo ordenamos según el nombre
+		Arrays.sort(socios, new ComparaNombre());
+
+		// Imprimimos el resultado
+		System.out.println(Arrays.deepToString(socios));
 	}
 
 }

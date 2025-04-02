@@ -3,7 +3,7 @@ package analisis.ejercicio3;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CuentaBancaria {
+public class CuentaBancaria implements Comparable<CuentaBancaria> {
 	private int numeroCuenta;
 	protected double saldo;
 	private List<Titular> titulares;
@@ -109,5 +109,22 @@ public class CuentaBancaria {
 				System.out.println("No se encontró un titular con ese DNI.");
 			}
 		}
+	}
+
+	@Override
+	public String toString() {
+		return "Número cuenta: " + numeroCuenta + "\n Saldo: " + saldo + "\n Titular: " + titulares + "\n";
+	}
+
+	@Override
+	public int compareTo(CuentaBancaria o) {
+		int res = 0;
+		if (this.numeroCuenta > o.numeroCuenta) {
+			res = 1;
+		}
+		if (this.numeroCuenta < o.numeroCuenta) {
+			res = -1;
+		}
+		return res;
 	}
 }

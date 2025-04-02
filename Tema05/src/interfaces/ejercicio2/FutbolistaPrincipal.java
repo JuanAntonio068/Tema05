@@ -16,6 +16,22 @@ public class FutbolistaPrincipal {
 
 		// Lo imprimimos
 		System.out.println(Arrays.deepToString(futbolistas));
+		// Salto de línea
+		System.out.println();
+
+		// Lo ordenamos según la edad de forma ascendente
+		Arrays.sort(futbolistas, new ComparaEdad());
+
+		// Lo imprimimos
+		System.out.println(Arrays.deepToString(futbolistas));
+		// Salto de línea
+		System.out.println();
+
+		// Lo ordenamos según el número de goles
+		Arrays.sort(futbolistas, new ComparaNumGoles());
+
+		// Lo imprimimos
+		System.out.println(Arrays.deepToString(futbolistas));
 	}
 
 }

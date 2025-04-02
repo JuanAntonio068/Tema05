@@ -51,6 +51,10 @@ public class Revista extends Ficha {
 	}
 
 	@Override
+	public String toString() {
+		return "ID: " + getId() + "\n + Título: " + getTitulo() + "\n Info: " + info + "\n Año: " + año + "\n";
+	}
+	@Override
 	public String prestar() {
 		return "La revista se ha prestado por 10 días";
 	}

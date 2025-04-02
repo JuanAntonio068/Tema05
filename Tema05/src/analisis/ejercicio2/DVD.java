@@ -27,6 +27,8 @@ public class DVD extends Ficha {
 		if (director != null && !director.isBlank())
 			this.director = director;
 
+		this.año = año;
+
 		switch (tipo) {
 		case "SERIE", "DOCUMENTAL" -> this.tipo = Tipo.valueOf(tipo);
 
@@ -59,6 +61,12 @@ public class DVD extends Ficha {
 	 */
 	public Tipo getTipo() {
 		return tipo;
+	}
+
+	@Override
+	public String toString() {
+		return "ID: " + getId() + "\n Título: " + getTitulo() + "\n Director: " + director + "\n Año: " + año
+				+ "\n Tipo: " + tipo + "\n";
 	}
 
 	@Override

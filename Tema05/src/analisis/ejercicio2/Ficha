@@ -1,0 +1,32 @@
+abstract Ficha
+	- id: int 
+	- titulo: String
+	+ abstract prestar()
+
+Libro extends Ficha
+	- autor: String
+	- editorial: String
+---------------------------
+	heredados:
+		- id: int 	
+  		- titulo: String	
+		+ prestar() (15 dias)
+
+Revista extends Ficha
+	- info: String
+	- año: int
+---------------------------
+	heredados:
+		- id: int 	
+  		- titulo: String
+		+ prestar() (10 dias)
+
+DVD extends Ficha
+	- director: String
+	- año: int
+	- tipo: Tipo (pelicula, documental, serie
+---------------------------
+	heredados:
+		- id: int 	
+  		- titulo: String
+		+ prestar() (5 dias)

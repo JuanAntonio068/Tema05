@@ -1,0 +1,20 @@
+Contacto
+	- nombre: String
+	- telf: int
+	+ equals (nombres)
+
+Persona extends Contacto
+	- cumple: String 
+--------------------------
+	heredados: 
+		- nombre: String
+		- telf: int
+		+ equals (nombres)
+
+Empresa extends Contacto
+	- web: String
+--------------------------
+	heredados: 
+		- nombre: String
+		- telf: int
+		+ equals (nombres)	

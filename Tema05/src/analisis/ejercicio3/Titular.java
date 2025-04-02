@@ -1,6 +1,6 @@
 package analisis.ejercicio3;
 
-public class Titular {
+public class Titular implements Comparable<Titular> {
 
 	private String dni;
 
@@ -78,4 +78,13 @@ public class Titular {
 		return apellidos;
 	}
 
+	@Override
+	public String toString() {
+		return "Dni: " + dni + "\n Nombre: " + nombre + "\n Apellidos: " + apellidos + "\n Teléfono: " + telf + "\n";
+	}
+
+	@Override
+	public int compareTo(Titular o) {
+		return this.dni.compareToIgnoreCase(o.dni);
+	}
 }

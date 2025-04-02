@@ -1,0 +1,67 @@
+Vehículo
+	- marca: String
+	- modelo: String
+	- color: String
+	- matricula: String
+	- motor: boolean
+	- marcha: int
+	- velocidad: int
+---------------------------
+	+ Parar()
+	+ Arrancar()
+	+ subirMarcha()
+	+ bajarMarcha()
+
+Turismo extends Vehiculo
+	- numPlazas: int
+	- uso: Tipo (Profesional o Particular)
+---------------------------
+	heredados: 
+		- marca: String
+		- modelo: String
+		- color: String
+		- matricula: String
+		- motor: booleam
+		- marcha: int
+		- velocidad: int
+---------------------------
+		+ Parar()
+		+ Arrancar()
+		+ subirMarcha()
+		+ bajarMarcha()
+
+Camion extends vehiculo
+	- pesoMaximo: double 
+	- mercanciaPeligrosa: boolean
+---------------------------
+	heredados: 
+		- marca: String
+		- modelo: String
+		- color: String
+		- matricula: String
+		- motor: booleam
+		- marcha: int
+		- velocidad: int
+---------------------------
+		+ Parar()
+		+ Arrancar()
+		+ subirMarcha()
+		+ bajarMarcha()
+
+Motocicletas extends Vehiculo
+	- cilindrada: int
+	+ requiereCarnet() : boolean >= 125 CC
+---------------------------
+	heredados: 
+		- marca: String
+		- modelo: String
+		- color: String
+		- matricula: String
+		- motor: booleam
+		- marcha: int
+		- velocidad: int
+---------------------------
+		+ Parar()
+		+ Arrancar()
+		+ subirMarcha()
+		+ bajarMarcha()

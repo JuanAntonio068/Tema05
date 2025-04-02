@@ -70,4 +70,9 @@ public class CuentaAhorro extends CuentaBancaria {
 		}
 	}
 
+	@Override
+	public String toString() {
+		return super.toString() + "Interes Anual: " + interesAnual + "\n Cuota de mantenimiento: " + cuotaMantenimiento
+				+ "\n";
+	}
 }
